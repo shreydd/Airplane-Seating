@@ -104,8 +104,14 @@ find_window_seats(seatsArray)
 # sort by row to go from left to right while assigning
 windowSeats.sort(key=lambda x : x[1])
 
+for eachSeat in seats_id:
+  if eachSeat not in aisleSeats:
+    if eachSeat not in windowSeats:
+      middleSeats.append(eachSeat)
+
 seated_passenger = 0
 
+# assign seats 
 for eachEle in aisleSeats:
   print("assignable aisle seat for", seated_passenger, "is",eachEle)
   seated_passenger = seated_passenger + 1
@@ -118,9 +124,6 @@ for eachEle in windowSeats:
 
 print(" ")
 
-# for seats in seats_id:
-#   print(seats)
-# print('the aisle seats are', aisleSeats)
-# print(totalColumns, "total Cols")
-# print(totalRows, "total rows")
-# print(seatsArray, no_of_passengers)
+for eachEle in middleSeats:
+  print("assignable middle seat for", seated_passenger, "is", eachEle)
+  seated_passenger = seated_passenger + 1
