@@ -1,6 +1,3 @@
-# seatsArray = input("input seats arrangement:")
-# no_of_passengers = input("input the no of passengers:")
-
 seatsArray = [[3,2], [4,3], [2,3], [3,4]]
 no_of_passengers = 30
 
